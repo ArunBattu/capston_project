@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>Cinema</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="logo">
+    <span style="font-size: 30px;">B</span>
+    <span>O</span>
+    <span>O</span>
+    <span>K</span>
+    <span style="font-size: 30px;">N</span>
+    <span>O</span>
+    <span>W</span>
+  </div>
+
+  <div class="container">
+    <div class="top">
+      <label for="">Select Cinema</label>
+      <select class="form-control" id="movie">
+        {{#each movies}}
+        <option value="{{rate}}">{{name}} Screen {{screenNo}} rupees {{rate}}/-</option>
+        {{/each}}
+      </select>
+    </div>
+
+    <ul class="showcase">
+      <li style="text-align:center;">
+        <div class="seat" style="margin:15px;"></div>
+        <small>Available</small>
+      </li>
+      <li style="text-align:center;">
+        <div class="seat selected" style="margin:15px;"></div>
+        <small>Selected</small>
+      </li>
+      <li style="text-align:center;">
+        <div class="seat occupied" style="margin:15px;"></div>
+        <small>Occupied</small>
+      </li>
+    </ul>
+    <div style="width: 420px; margin-top:120px;">
+
+      <div class="cinema-container">
+
+        <div class="screen">
+
+
+          <div class="circle-inner"></div>
+          <div class="circle-outer"></div>
+
+
+          <div class="screen2">
+
+            <div class="sheep">
+
+
+
+            </div>
+
+          </div>
+
+        </div>
+        <div class="ground"></div>
+
+        <div class="curtain1"></div>
+        <div class="curtain2"></div>
+        <div class="wall"></div>
+        <div class="ceiling"></div>
+
+
+
+
+      </div>
+      <div class="row" id="screen1">
+        {{#each screen1}}
+        <div class="seat {{status}}" id="{{seatno}}"></div>
+
+        {{/each}}
+      </div>
+      <div class="row" style="visibility: hidden; display:none" id="screen2">
+        {{#each screen2}}
+        <div class="seat {{status}}" id="{{seatno}}"></div>
+        {{/each}}
+      </div>
+      <div class="row" style="visibility: hidden; display:none" id="screen3">
+        {{#each screen3}}
+        <div class="seat {{status}}" id="{{seatno}}"></div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+
+  <div id="finalCost" style="display: none; visibility:hidden; text-align:center;">
+    <p id="cost"></p>
+  </div>
+
+  <div class="book">
+    <button class="btn btn-danger">Book Now</button>
+  </div>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

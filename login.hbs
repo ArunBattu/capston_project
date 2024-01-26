@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostGram | Login</title>
+    <link rel="stylesheet" href="log.css">
+   
+</head>
+<body>
+     <nav class="top_nav">
+        <li class="logo">Post Gram</li>
+        <li class="nav_items"><a href="/posts" style="color: black; text-decoration:none;">Posts</a></li>
+        <li class="nav_items">About</li>
+        <li class="nav_items">Others</li>
+     </nav>
+     <div class="wrapper login">
+        <div class="container">
+            <div class="col-left">
+                <div class="login-text">
+                    <h2>Welcome!</h2>
+                    <p>Create your account.<br>For Free!</p> <a href="/signup" class="btn">Sign Up</a>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="login-form">
+                    <h2>Login</h2>
+                    <form action="login" method="POST">
+                        <p> <label for="profile">Username<span>*</span></label> <input name="profile" type="text" placeholder="Username " required> </p>
+                        <p> <label for="password" id="password">Password<span>*</span></label> <input name="password" type="password" placeholder="Password" required> </p>
+                        <p> <input type="submit" value="Sign In"> </p>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <footer><H4>Copyright © 2023 Post Gram. All rights Reserved.</H4></footer>
+      </div>
+</body>
+</html>

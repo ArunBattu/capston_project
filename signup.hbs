@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostGram | Sign Up</title>
+    <link rel="stylesheet" href="sign.css">
+   
+</head>
+<body>
+     <nav class="top_nav">
+        <li class="logo">Post Gram</li>
+        <li class="nav_items"><a href="/posts" style="color: black; text-decoration:none;">Posts</a></li>
+        <li class="nav_items">About</li>
+        <li class="nav_items">Others</li>
+     </nav>
+     <div class="wrapper login">
+        <div class="container">
+            <div class="col-left">
+                <div class="login-text">
+                    <h2>Welcome!</h2>
+                    <p>
+Already have an account<br>Login Here</p> <a href="/" class="btn">Sign In</a>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="login-form">
+                    <h3>Create Account</h3>
+                    <form action="/addusers" method="post">
+                        <p> <label for="profile">Username<span>*</span></label> <input name="profile" id="profile" type="text" placeholder="Username" required> </p>
+                        <p> <label for="name">Full Name<span>*</span></label> <input name="name" id="name" type="text" placeholder="Full Name" required> </p>
+                        <p> <label for="headline">About<span>*</span></label> <input name="headline" id="headline" type="text" placeholder="Work Details" required> </p>
+                        <p> <label for="password">Password<span>*</span></label> <input name="password" id="password" type="password" placeholder="Password" required> </p>
+                        <p> <label for="cnfpassword">Confirm Password<span>*</span></label> <input name="cnfpassword" id="cnfpassword" type="password" placeholder="Re-Password" required> </p>
+                        <p> <input type="submit" value="Sign Up"> </p>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <footer><H4>Copyright © 2023 Post Gram. All rights Reserved.</H4></footer>
+      </div>
+</body>
+</html>

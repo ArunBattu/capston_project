@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostGram | Post</title>
+    <link rel="stylesheet" href="pos.css">
+ 
+</head>
+<body>
+     <nav class="top_nav" style="text-align: center; align-items: center; justify-content: center;">
+        <li class="logo">Post Gram</li>
+        <li class="nav_items"><a href="/signup" style="color: black; text-decoration:none;">Create New Account</a></li>
+        <li class="nav_items">About</li>
+        <li class="nav_items">Others</li>
+     </nav>
+     <div class="scr">
+     <div class="wrapper login">
+      
+        <div class="container">
+            <div class="col-left">
+                <div class="login-text">
+                    <h2>{{userInfo.name}}</h2>
+                    <h4>@{{userInfo.profile}}</h4>
+                    <h4>{{userInfo.headline}}</h4>
+                    	<a class="btn" href="#popup1">POST</a>
+<div id="popup1" class="btn1">
+	<div class="popup">
+		<h2>Create New Post</h2>
+        
+		<a class="close" href="#">&times;</a>
+		<div class="modal-body">
+                  <form action="/addposts" method="post">
+                    
+                    <div class="mb-3">
+                      <input type="hidden" name="profile" value="{{userInfo.profile}}">
+                      <label for="message-text" class="col-form-label">Message:</label>
+                      <textarea class="form-control" style="width: 200px; height:50px" name="content" id="message-text"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                  
+                  <button style="margin-left: 60px;" type="submit" class="btn">Post</button>
+                </div>
+                  </form>
+                </div>
+	</div>
+</div>
+                </div>
+            </div>
+              
+            <div class="col-right">
+                
+                <div class="login-form">
+                  
+                    <h2 style="text-align: center;">New Posts</h2>
+                    {{#each data}}
+                    <div class="post1">
+                        <h4>@{{profile}}</h4>
+                        <p>{{content}}</p>
+                        <div class="actions">
+                            <form action="/likes" method="post">
+                              <button type="submit" style="width: 100px;">Like</button>
+                              <input type="hidden" name="content" value="{{content}}">
+                            </form>
+                            <button type="button" style="width: 100px;" disabled>{{likes}}</button>
+
+                            <form action="/shares" method="post">
+                            <button type="submit" style="width: 100px;">Share</button>
+                            <input type="hidden" name="content" value="{{content}}">
+                            </form>
+                            <button type="button" style="width: 100px;"disabled>{{shares}}</button>
+
+                            <form action="/delete" method="post">
+                            <button type="submit" style="width: 100px;">Delete</button>
+                            <input type="hidden"name="content" value="{{content}}">
+                            
+                            </form>
+                        </div>
+                    </div>
+                    {{/each}}
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+    <div class="foot">
+        <footer><H4>Copyright © 2023 Post Gram. All rights Reserved.</H4></footer>
+      </div>
+</body>
+</html>
